@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Harshit Dry Fruits | Jodhpur</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font:
+          16px/1.6 Arial,
+          sans-serif;
+        color: #333;
+        background: #fff;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .wrap {
+        max-width: 1100px;
+        width: 90%;
+        margin: auto;
+      }
+      header {
+        border-bottom: 1px solid #ddd;
+        background: white;
+      }
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 70px;
+      }
+      .brand {
+        font-size: 23px;
+        font-weight: bold;
+        color: #386044;
+      }
+      nav {
+        display: flex;
+        gap: 24px;
+      }
+      nav a:hover {
+        color: #386044;
+      }
+      .menu {
+        display: none;
+      }
+      button,
+      .btn {
+        display: inline-block;
+        background: #386044;
+        color: white;
+        border: 0;
+        padding: 11px 20px;
+        border-radius: 4px;
+        font: inherit;
+        cursor: pointer;
+      }
+      .hero {
+        background: #f3f1e8;
+        padding: 55px 0;
+      }
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+        align-items: center;
+      }
+      h1 {
+        font-size: 42px;
+        line-height: 1.2;
+        margin: 0 0 16px;
+      }
+      h2 {
+        font-size: 28px;
+        margin: 0 0 12px;
+      }
+      h3 {
+        margin: 12px 0 4px;
+      }
+      p {
+        margin: 0 0 18px;
+      }
+      .photo {
+        background: #e5e5df;
+        display: grid;
+        place-items: center;
+        position: relative;
+        overflow: hidden;
+        color: #777;
+        min-height: 230px;
+        border-radius: 4px;
+      }
+      .photo img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        inset: 0;
+      }
+      .hero .photo {
+        min-height: 300px;
+      }
+      section {
+        padding: 48px 0;
+      }
+      .center {
+        text-align: center;
+      }
+      .products {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 24px;
+      }
+      .product {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      .product .photo {
+        border-radius: 0;
+        min-height: 190px;
+      }
+      .details {
+        padding: 16px;
+      }
+      .details p {
+        color: #666;
+        font-size: 14px;
+      }
+      .muted {
+        background: #f7f7f4;
+      }
+      .contact {
+        text-align: center;
+      }
+      footer {
+        background: #304a36;
+        color: white;
+        padding: 24px 0;
+        font-size: 14px;
+      }
+      footer p {
+        margin: 4px 0;
+      }
+      .note {
+        font-size: 13px;
+        color: #777;
+      }
+      dialog {
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        max-width: 90%;
+        width: 420px;
+        padding: 24px;
+      }
+      dialog::backdrop {
+        background: #0005;
+      }
+      @media (max-width: 700px) {
+        .menu {
+          display: block;
+          padding: 7px 13px;
+        }
+        .nav {
+          flex-wrap: wrap;
+        }
+        nav {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+          gap: 0;
+        }
+        nav.open {
+          display: flex;
+        }
+        nav a {
+          padding: 10px 0;
+          border-top: 1px solid #eee;
+        }
+        .split {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .products {
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+        h1 {
+          font-size: 32px;
+        }
+        .hero {
+          padding: 32px 0;
+        }
+        .hero .photo {
+          min-height: 220px;
+        }
+        .product .photo {
+          min-height: 130px;
+        }
+        .details {
+          padding: 12px;
+        }
+        .brand {
+          font-size: 20px;
+        }
+        section {
+          padding: 32px 0;
+        }
+      }
+      @media (max-width: 360px) {
+        .products {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="#home">Harshit Dry Fruits</a
+        ><button
+          class="menu"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <nav>
+          <a href="#home">Home</a><a href="#products">Products</a
+          ><a href="#about">About Us</a><a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero" id="home">
+        <div class="wrap split">
+          <div>
+            <p>Welcome to Harshit Dry Fruits</p>
+            <h1>Quality Dry Fruits in Jodhpur</h1>
+            <p>
+              Explore a selection of dry fruits and nuts for everyday snacking,
+              gifting and special occasions.
+            </p>
+            <a class="btn" href="#products">View Products</a>
+          </div>
+          <div class="photo">
+            Banner Image<img
+              src="images/hero.jpeg"
+              alt="Dry fruits selection"
+              onerror="this.hidden = true"
+            />
+          </div>
+        </div>
+      </section>
+      <section id="products">
+        <div class="wrap">
+          <div class="center">
+            <h2>Our Products</h2>
+            <p>Explore our dry fruit collection.</p>
+          </div>
+          <div class="products">
+            <article class="product">
+              <div class="photo">
+                Product Image<img
+                  src="images/almonds.jpg"
+                  alt="Almonds"
+                  onerror="this.hidden = true"
+                />
+              </div>
+              <div class="details">
+                <h3>Almonds</h3>
+                <p>Badam for everyday snacking.</p>
+                <button data-product="Almonds">Enquire</button>
+              </div>
+            </article>
+            <article class="product">
+              <div class="photo">
+                Product Image<img
+                  src="images/cashews.jpg"
+                  alt="Cashews"
+                  onerror="this.hidden = true"
+                />
+              </div>
+              <div class="details">
+                <h3>Cashews</h3>
+                <p>Kaju for snacks and sweets.</p>
+                <button data-product="Cashews">Enquire</button>
+              </div>
+            </article>
+            <article class="product">
+              <div class="photo">
+                Product Image<img
+                  src="images/assorted.jpg"
+                  alt="Mixed dry fruits"
+                  onerror="this.hidden = true"
+                />
+              </div>
+              <div class="details">
+                <h3>Mixed Dry Fruits</h3>
+                <p>Assorted nuts and dry fruits.</p>
+                <button data-product="Mixed dry fruits">Enquire</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="muted">
+        <div class="wrap split">
+          <div class="photo">
+            Shop Image<img
+              src="images/about.jpg"
+              alt="Harshit Dry Fruits shop"
+              onerror="this.hidden = true"
+            />
+          </div>
+          <div>
+            <h2>About Us</h2>
+            <p>
+              Harshit Dry Fruits is a Jodhpur-based dry fruits seller focused on
+              providing good quality dry fruits and nuts.
+            </p>
+            <p>
+              Contact us for product details, availability and gifting
+              requirements.
+            </p>
+            <a class="btn" href="#contact">Contact Us</a>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="wrap">
+          <h2>Get in Touch</h2>
+          <p>Harshit Dry Fruits, Jodhpur, Rajasthan</p>
+          <button data-product="Dry fruits">WhatsApp Enquiry</button>
+          <a
+            class="btn"
+            href="https://www.google.com/maps/search/?api=1&query=Harshit+Dry+Fruits+Jodhpur"
+            target="_blank"
+            rel="noopener"
+            >Find on Maps</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrap">
+        <strong>Harshit Dry Fruits</strong>
+        <p>Jodhpur, Rajasthan</p>
+        <p>© <span id="year"></span> Harshit Dry Fruits · Website demo</p>
+      </div>
+    </footer>
+    <dialog id="demo">
+      <h2>Product Enquiry</h2>
+      <p id="message"></p>
+      <p class="note">
+        WhatsApp number to be added after business confirmation.
+      </p>
+      <button onclick="document.querySelector('#demo').close()">Close</button>
+    </dialog>
+    <script>
+      const WHATSAPP_NUMBER = "";
+      const menu = document.querySelector(".menu"),
+        nav = document.querySelector("nav");
+      menu.onclick = () =>
+        menu.setAttribute("aria-expanded", nav.classList.toggle("open"));
+      nav.querySelectorAll("a").forEach(
+        (a) =>
+          (a.onclick = () => {
+            nav.classList.remove("open");
+            menu.setAttribute("aria-expanded", "false");
+          }),
+      );
+      document.querySelectorAll("[data-product]").forEach(
+        (b) =>
+          (b.onclick = () => {
+            const msg =
+              "Hello, I would like to enquire about " + b.dataset.product + ".";
+            if (/^\d{10,15}$/.test(WHATSAPP_NUMBER))
+              window.open(
+                "https://wa.me/" +
+                  WHATSAPP_NUMBER +
+                  "?text=" +
+                  encodeURIComponent(msg),
+                "_blank",
+                "noopener",
+              );
+            else {
+              document.querySelector("#message").textContent = msg;
+              document.querySelector("#demo").showModal();
+            }
+          }),
+      );
+      document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
+    <style>
+      .photo img[hidden] {
+        display: none;
+      }
+    </style>
+  </body>
+</html>
